@@ -1,11 +1,16 @@
+
+
 <html>
   <body>
     <h1>You're using a layout</h1>
     <p>
       <h3> I'm a header</h3>
-      <p>Put things in the header</p>
-      <a href='me.html'>Me</a>
-
+     <% def link_to(name,url)
+      return "<a href='#{url}''>#{name}</a>"
+    end
+    %>
+      <p>
+<%= link_to('This is a link to Google', 'http://www.google.com') %>
     </p>
     <hr />
     <div>
@@ -15,6 +20,7 @@
     <div>
       <h3> I'm a footer</h3>
       <p>Put things in the footer</p>
+    <p> <%= link_to('Link in my footer','http://www.tracecode.com.au') %>
     </div>
   </body>
 </html>
